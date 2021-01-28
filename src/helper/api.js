@@ -7,8 +7,6 @@ export const getReview = async () => {
     );
     return response.data.data;
   } catch (e) {
-    console.log(
-      `There is an error during the API call. Error: ${JSON.stringify(e)}`
-    );
+    throw `There is an error during the API call. Error: ${JSON.stringify(e)}`;
   }
 };

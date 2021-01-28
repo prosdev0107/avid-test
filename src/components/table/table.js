@@ -141,7 +141,7 @@ export default function DataTable({ data, headerCells, handleDetailsClick }) {
                           );
                         }
                         return (
-                          <TableCell key align="left">
+                          <TableCell key={`${cell.id}-${index}`} align="left">
                             {row[cell.id]}
                           </TableCell>
                         );
